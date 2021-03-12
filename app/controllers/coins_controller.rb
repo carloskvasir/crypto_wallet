@@ -7,8 +7,7 @@ class CoinsController < ApplicationController
   end
 
   # GET /coins/1 or /coins/1.json
-  def show
-  end
+  def show; end
 
   # GET /coins/new
   def new
@@ -16,8 +15,7 @@ class CoinsController < ApplicationController
   end
 
   # GET /coins/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /coins or /coins.json
   def create
