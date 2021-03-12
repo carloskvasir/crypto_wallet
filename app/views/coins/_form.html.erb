@@ -24,6 +24,10 @@
   <div class="field">
     <%= form.label :url_image %>
     <%= form.text_field :url_image %>
+    <% if coin.url_image.present? %>
+      <br>
+      <%= image_tag coin.url_image, size: 25  %>
+    <% end %>
   </div>
 
   <div class="actions">
