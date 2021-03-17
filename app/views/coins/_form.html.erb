@@ -33,7 +33,7 @@
   <div class="field">
     <%= form.label :mining_type %>
     <%= form.select("mining_type_id",
-                    MiningType.all.plack(:description, :id),
+                    @mining_type_options,
                     { include_blank: 'Selecione'})
     %>
   </div>
