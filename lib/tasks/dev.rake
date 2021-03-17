@@ -5,7 +5,8 @@ namespace :dev do
       show_spinner('Apagando banco de dados'){ %x(rails db:drop) }
       show_spinner('Criando banco de dados'){ %x(rails db:create) }
       show_spinner('Executando migrates') { %x(rails db:migrate) }
-      show_spinner('Seed Coins') { %x(rails dev:add_coins) }
+      show_spinner('Seeding Coins') { %x(rails dev:add_coins) }
+      show_spinner('Seeding MiningTypes') { %x(rails dev:add_mining_types) }
     else
       puts 'Você não está em modo de desenvolvimento!'
     end
@@ -20,7 +21,20 @@ namespace :dev do
     spinner.success("#{msg_end}")
   end
 
-  desc 'Cadastra as moedas'
+  desc 'Seed MiningTypes'
+  task add_mining_types: :environment do
+    mining_types =
+      [
+        {name: "Proof of Work", acronym: "PoW"},
+        {name: "Proof of Stake", acronym: "PoS"},
+        {name: "Proof of Capacity", acronym: "PoC"},
+      ]
+    mining_types.each do |mining_type|
+      MiningType.find_or_create_by!(mining_type)
+    end
+
+  end
+  desc 'Seed Coins'
   task add_coins: :environment do
     coins =
       [
