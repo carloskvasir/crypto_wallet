@@ -2,11 +2,11 @@ namespace :dev do
   desc 'Config dev environment'
   task setup: :environment do
     if Rails.env.development?
-      show_spinner('Apagando banco de dados'){ %x(rails db:drop) }
-      show_spinner('Criando banco de dados'){ %x(rails db:create) }
-      show_spinner('Executando migrates') { %x(rails db:migrate) }
-      show_spinner('Seeding Coins') { %x(rails dev:add_coins) }
+      show_spinner('Dropping database'){ %x(rails db:drop) }
+      show_spinner('Create database'){ %x(rails db:create) }
+      show_spinner('Running migrates') { %x(rails db:migrate) }
       show_spinner('Seeding MiningTypes') { %x(rails dev:add_mining_types) }
+      show_spinner('Seeding Coins') { %x(rails dev:add_coins) }
     else
       puts 'Você não está em modo de desenvolvimento!'
     end
@@ -42,26 +42,31 @@ namespace :dev do
           description: 'Bitcoin',
           acronym: 'BTC',
           url_image: 'http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png',
+          mining_type: MiningType.find_by(acronym: 'PoW')
         },
         {
           description: 'Ethereum',
           acronym: 'ETH',
           url_image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg',
+          mining_type: MiningType.all.sample,
         },
         {
           description: 'Dash',
           acronym: 'DASH',
           url_image: 'https://ih1.redbubble.net/image.565893629.7574/st,small,845x845-pad,1000x1000,f8f8f8.u2.jpg',
+          mining_type: MiningType.all.sample,
         },
         {
           description: 'Iota',
           acronym: 'IOT',
           url_image: 'https://z.cash/wp-content/uploads/2018/10/zcash-logo-fullcolor-512sq.png',
+          mining_type: MiningType.all.sample,
         },
         {
           description: 'ZCash',
           acronym: 'ZEC',
           url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png',
+          mining_type: MiningType.all.sample,
         }
       ]
 
