@@ -1,5 +1,8 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+# Module for ApplicationHelpers
+# put here helpers for general use
+module ApplicationHelper
   # Get natural text based in +locale+
   def locale
     I18n.locale == :en ? 'Estados Unidos' : 'Português do Brasil'
