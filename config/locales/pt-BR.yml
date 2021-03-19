@@ -2,6 +2,22 @@
 # and are automatically loaded by Rails.
 
 pt-BR:
+  simple_form:
+    "yes": Sim
+    "no": Não
+    required:
+      text: Necessário
+      mark: '*'
+    error_notification:
+      default_message: "Observe estes problemas:"
+    labels:
+      coin:
+        description: Nome
+    placeholders:
+      coin:
+        description: Bitcoin
+        acronym: BTC
+
   actual_locale: Português do Brasil
   hello: Olá Mundo!
   links:

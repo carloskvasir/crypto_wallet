@@ -1,10 +1,23 @@
 # Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-
-# available at http://guides.rubyonrails.org/i18n.html.
+# and are automatically loaded by Rails.
 
 en:
+  simple_form:
+    "yes": Yes
+    "no": No
+    required:
+      text: required
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      coin:
+        description: Name
+    placeholders:
+      coin:
+        description: Bitcoin
+        acronym: BTC
+
   actual_locale: English (internacional)
   hello: Hello world
   links:

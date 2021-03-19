@@ -1,0 +1,29 @@
+# File contains translation for Portuguese
+
+en:
+  activerecord:
+    models:
+      coin:
+        one: Coin
+        other: Coins
+      mining_type:
+        one: Mining type
+        other: Mining types
+
+    attributes:
+      coin:
+        id: Identifier
+        description: Name
+        acronym: Acronym
+        url_image: URL of image
+        mining_type: Mining type
+        mining_type_id: Identifier mining types
+        updated_at: Updated at
+        created_at: Created at
+
+      mining_type:
+        id: Identifier
+        description: Name
+        acronym: Acronym
+        updated_at: Updated at
+        created_at: Created at
