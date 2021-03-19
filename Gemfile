@@ -43,10 +43,7 @@ gem 'i18n'
 gem 'pry-rails'
 gem 'simple_form'
 gem 'tty-spinner'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-jquery'
-  gem 'rails-assets-notifyjs'
-end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
