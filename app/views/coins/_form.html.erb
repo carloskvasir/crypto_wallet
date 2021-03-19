@@ -2,6 +2,6 @@
   <%= f.input :description %>
   <%= f.input :acronym %>
   <%= f.input :url_image %>
-  <%= f.input :mining_type, collection: @mining_type_options %>
+  <%= f.association :mining_type, label_method: :description, prompt: true %>
   <%= f.button :submit %>
 <% end %>
