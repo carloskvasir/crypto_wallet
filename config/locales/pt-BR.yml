@@ -2,6 +2,9 @@
 # and are automatically loaded by Rails.
 
 pt-BR:
+  welcome:
+    hello_msg: Este é o Crypto Wallet, uma app pra você cadastrar e acompanhar suas criptomoedas.
+    call_to_action: "Pra começar, selecione umas das opções abaixo:"
   simple_form:
     "yes": Sim
     "no": Não

@@ -1,12 +1,10 @@
 <div class="jumbotron">
   <h1 class="display-4"><%= t('hello') %></h1>
-  <p class="lead">
-    Este é o Crypto Wallet, uma app pra você cadastrar e acompanhar suas criptomoedas.
-  </p>
+  <p class="lead"><%= t('welcome.hello_msg') %></p>
   <hr class="my-4">
-  <p>Pra começar, selecione umas das opções abaixo:</p>
+  <p><%= t('welcome.call_to_action') %></p>
   <p class="lead">
-    <%= link_to "Moedas", coins_path, class:"btn btn-primary btn-lg" %>
-    <%= link_to "Tipos de Mineração", mining_types_path, class:"btn btn-primary btn-lg" %>
+    <%= link_to t("activerecord.models.coin.other"), coins_path, class:"btn btn-primary btn-lg" %>
+    <%= link_to t("activerecord.models.mining_type.other"), mining_types_path, class:"btn btn-primary btn-lg" %>
   </p>
 </div>
