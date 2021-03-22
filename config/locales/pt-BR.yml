@@ -2,6 +2,8 @@
 # and are automatically loaded by Rails.
 
 pt-BR:
+  messages:
+    confirm: 'Você tem certeza?'
   welcome:
     hello_msg: Este é o Crypto Wallet, uma app pra você cadastrar e acompanhar suas criptomoedas.
     call_to_action: "Pra começar, selecione umas das opções abaixo:"
@@ -21,14 +23,17 @@ pt-BR:
         description: Bitcoin
         acronym: BTC
 
-  confirm: Tem certeza?
-  actual_locale: Português do Brasil
   hello: Olá Mundo!
   links:
     edit: Editar
     show: Mostrar
     delete: Apagar
     new: Cadastrar
+    back: Voltar
+  new:
+    coin: Nova moeda
+  editing:
+    coin: Editando moeda
 
   activerecord:
     errors:

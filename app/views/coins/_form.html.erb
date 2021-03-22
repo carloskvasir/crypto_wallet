@@ -1,7 +1,15 @@
-<%= simple_form_for @coin do |f| %>
-  <%= f.input :description %>
-  <%= f.input :acronym %>
-  <%= f.input :url_image %>
-  <%= f.association :mining_type, label_method: :description, prompt: true %>
-  <%= f.button :submit %>
+<%= simple_form_for @coin, :html => { :class => 'form-horizontal' }  do |f| %>
+  <%- if f.error_notification %>
+    <div class="alert alert-error fade in">
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= f.error_notification %>
+    </div>
+  <%- end %>
+  <div class="form-inputs">
+    <%= f.input :description , :html => {:class => 'row mb-3'} %>
+    <%= f.input :acronym %>
+    <%= f.input :url_image %>
+    <%= f.association :mining_type, label_method: :description, prompt: true %>
+    <%= f.button :submit %>
+  </div>
 <% end %>

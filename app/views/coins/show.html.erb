@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @coin.description %>
-</p>
+<form>
+<div class="form-group">
+  <%= label_tag nil, t('activerecord.attributes.coin.description') %>
+  <%= text_field_tag nil, @coin.description, class:'form-control', disabled: true %>
+</div>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @coin.acronym %>
-</p>
+<div class="form-group">
+  <%= label_tag nil, t('activerecord.attributes.coin.acronym') %>
+  <%= text_field_tag nil, @coin.acronym, class:'form-control', disabled: true %>
+</div>
 
-<p>
-  <strong>Url image:</strong>
-  <%= @coin.url_image %>
-  <% if @coin.url_image.present? %>
-    <br>
-    <%= image_tag @coin.url_image, size: 25  %>
-  <% end %>
-</p>
+  <div class="form-group">
+    <%= label_tag nil, t('activerecord.attributes.coin.url_image') %>
+    <%= text_field_tag nil, @coin.url_image, class:'form-control', disabled: true %>
+  </div>
 
-<%= link_to 'Edit', edit_coin_path(@coin) %> |
-<%= link_to 'Back', coins_path %>
+  <div class="form-group">
+    <%= label_tag nil, t('activerecord.attributes.coin.mining_type') %>
+    <%= text_field_tag nil, @coin.mining_type.description, class:'form-control', disabled: true %>
+  </div>
+</form>
+
+<%= link_to t('links.edit'), edit_coin_path(@coin), class: 'btn btn-primary mx-2' %>
+<%= link_to t('links.back'), coins_path, class: 'btn btn-primary mx-2' %>

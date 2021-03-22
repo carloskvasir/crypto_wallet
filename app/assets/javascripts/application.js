@@ -16,4 +16,4 @@
 //= require jquery
 //= require notify-js-legacy/notify
 //= require bootstrap/js/dist
-//= require @popperjs/core/lib
+
